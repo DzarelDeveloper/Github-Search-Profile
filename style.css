@@ -1,0 +1,334 @@
+/* Import Google Font - Space Mono */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ background:#025BBF;
+ font-family: "Space Mono", serif;
+}
+
+.container {
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.container .search-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.container .search-box input {
+    width: 100%;
+    height: 50px;
+    background: #F8F8FF;
+    padding: 0 20px;
+    padding-left: 45px;
+    font-size: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.container .search-box input:focus {
+    border-color: #025BBF;
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(2,91,191,0.1);
+}
+
+.container .search-box::before {
+    content: '🔍';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.container .search-box button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    padding: 0 25px;
+    background: #025BBF;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.container .search-box button:hover {
+    background: #0247A5;
+    transform: none;
+}
+
+.container .user-details {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container .user-details .img-box {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.container .user-details .img-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container .user-details .details {
+    flex: 1;
+    min-width: 200px;
+    float: none;
+    margin-top: 0;
+}
+
+.container .user-details .details h3{
+ font-weight:400;
+}
+
+.container .user-details .details .name{
+ font-size:24px;
+ margin-bottom:5px;
+}
+
+.container .user-details .details .username{
+ font-size:14px;
+ margin-bottom:8px;
+ color:#025BBF;
+}
+
+.container .user-details .details .join-date{
+ font-size:11px;
+ position:relative;
+ top:3px;
+}
+
+.container .bio{
+ font-size:15px;
+ line-height:1.5;
+ margin:20px 0;
+ color:#444;
+}
+
+.container .user-profile {
+    background: linear-gradient(145deg, #F8F8FF, #F4F4FE);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.container .user-profile div {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 0;
+}
+
+.container .user-profile div a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.container .user-profile div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(2,91,191,0.15);
+}
+
+.container .user-profile div span {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.container .user-profile div h2 {
+    font-size: 28px;
+    color: #025BBF;
+    font-weight: 700;
+}
+
+.container .user-other-details{
+ margin-top:25px;
+}
+
+.container .user-other-details p{
+ margin-top:12px;
+ display:flex;
+ align-items:center;
+ gap:10px;
+ color:#444;
+}
+
+.container .user-other-details p a {
+    text-decoration: none;
+    color: #025BBF;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .user-other-details p a:hover {
+    color: #0247A5;
+    transform: translateX(3px);
+}
+
+.container .user-details .details .username a {
+    text-decoration: none;
+    color: #025BBF;
+    transition: all 0.3s ease;
+}
+
+.container .user-details .details .username a:hover {
+    color: #0247A5;
+    text-decoration: underline;
+}
+
+.container .user-other-details p.unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.container .user-other-details p i {
+    min-width: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .container {
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+        width: 92%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .container .search-box input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .container .search-box button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 10px 10px 0;
+        height: 45px;
+        width: auto;
+    }
+
+    .container .user-details {
+        margin-top: 20px;
+    }
+
+    .container .user-details .img-box {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container .user-details .details {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .container .bio {
+        text-align: left;
+        font-size: 14px;
+        margin: 15px 0;
+    }
+
+    .container .user-profile {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .container .user-profile div {
+        padding: 10px 5px;
+    }
+
+    .container .user-profile div h2 {
+        font-size: 20px;
+    }
+
+    .container .user-profile div span {
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    .container .user-other-details {
+        margin-top: 20px;
+    }
+
+    .container .user-other-details p {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .container .user-profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container .user-profile div:last-child {
+        grid-column: span 2;
+    }
+
+    .container .user-details .details .name {
+        font-size: 20px;
+    }
+
+    .container .user-details .details .username {
+        font-size: 13px;
+    }
+}
